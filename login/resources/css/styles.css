@@ -93,9 +93,11 @@ caption, .subtitle {
     text-align: center;
     border: 5px solid var(--kc-color-soft-grayish-purple); /* Add full border */
     border-bottom: none; /* Remove bottom border for seamless join */
-    border-radius: 0;
-    border-top-left-radius: 8px; /* Keep top corners rounded */
+    border-radius: 0; /* Set all to 0 */
+    border-top-left-radius: 8px; /* Re-apply top corners */
     border-top-right-radius: 8px;
+    border-bottom-left-radius: 0; /* Enforce square bottom corners */
+    border-bottom-right-radius: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* High-tech shadow */
 }
 
@@ -114,8 +116,10 @@ caption, .subtitle {
     background-color: #ffffff; /* Use a clean white/light color for the card content for clarity */
     border: 5px solid var(--kc-color-soft-grayish-purple); /* Thicker metallic border */
     border-top: none; /* Remove top border for seamless join */
-    border-radius: 0;
-    border-bottom-left-radius: 8px; /* Keep bottom corners rounded */
+    border-radius: 0; /* Set all to 0 */
+    border-top-left-radius: 0; /* Enforce square top corners */
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px; /* Re-apply bottom corners */
     border-bottom-right-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Little drop shadow */
     width: 100%; /* Always full width */
