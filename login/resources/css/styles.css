@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Mastiff Brand Guidelines - Steampunk Meets High-Tech Theme */
+
+:root {
+    /* Primary Colors */
+    --kc-color-light-beige: #d4cec2;
+    --kc-color-dark-charcoal: #151119;
+
+    /* Secondary Colors */
+    --kc-color-soft-grayish-purple: #423941;
+    --kc-color-steel-blue: #617a8c;
+
+    /* Accent Colors */
+    --kc-color-warm-light-peach: #f3c8a3;
+    --kc-color-muted-copper: #bc7259;
+
+    /* Typography */
+    --kc-font-primary: 'Roboto Slab', serif;
+    --kc-font-secondary: 'Roboto', sans-serif;
+
+    /* Spacing/Layout */
+    --kc-spacing-default: 1rem;
+    --kc-spacing-large: 2rem;
+}
+
+body {
+    /* Background: Light Beige */
+    background-color: var(--kc-color-light-beige);
+    /* Global Text: Dark Charcoal */
+    color: var(--kc-color-dark-charcoal);
+    font-family: var(--kc-font-primary);
+    font-size: 16px; /* Body Text */
+    line-height: 1.5;
+    padding: var(--kc-spacing-default);
+}
+
+/* Typography Hierarchy */
+h1, #kc-page-title {
+    font-size: 36px; /* H1 */
+    line-height: 1.2;
+    font-family: var(--kc-font-primary);
+    color: var(--kc-color-dark-charcoal);
+    margin-bottom: var(--kc-spacing-default);
+}
+
+h2 {
+    font-size: 30px; /* H2 */
+    line-height: 1.2;
+    font-family: var(--kc-font-primary);
+    color: var(--kc-color-dark-charcoal);
+    margin-bottom: calc(var(--kc-spacing-default) / 2);
+}
+
+h3 {
+    font-size: 24px; /* H3 */
+    line-height: 1.2;
+    font-family: var(--kc-font-primary);
+    color: var(--kc-color-dark-charcoal);
+    margin-bottom: calc(var(--kc-spacing-default) / 4);
+}
+
+caption, .subtitle {
+    font-size: 12px; /* Captions */
+    font-family: var(--kc-font-secondary);
+}
+
+/* Keycloak Structure Styling - Steampunk Meets High-Tech Aesthetic */
+
+/* Main login container */
+.kcLoginClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: var(--kc-spacing-large);
+}
+
+/* Header and Wrapper for a sleek look (Dark Charcoal) */
+#kc-header {
+    background-color: var(--kc-color-dark-charcoal);
+    color: var(--kc-color-light-beige);
+    padding: var(--kc-spacing-default);
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* High-tech shadow */
+}
+
+#kc-header-wrapper {
+    font-family: var(--kc-font-primary);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+/* Form Card - Industrial, framed look */
+.kcFormCardClass {
+    background-color: #ffffff; /* Use a clean white/light color for the card content for clarity */
+    border: 3px solid var(--kc-color-soft-grayish-purple); /* Metallic border */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Little drop shadow */
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden; /* To contain the header's border-radius */
+}
+
+/* Form Header (below main header) */
+.kcFormHeaderClass {
+    padding: var(--kc-spacing-default) var(--kc-spacing-large);
+    border-bottom: 1px solid var(--kc-color-soft-grayish-purple);
+}
+
+/* Content Wrapper/Area */
+#kc-content {
+    padding: var(--kc-spacing-default) var(--kc-spacing-large);
+}
+
+/* Messages/Alerts - High-tech clarity with contrast */
+.kcAlertClass {
+    border-radius: 4px;
+    margin-bottom: var(--kc-spacing-default);
+    padding: var(--kc-spacing-default);
+    display: flex;
+    align-items: center;
+    font-family: var(--kc-font-secondary);
+}
+
+.alert-error {
+    background-color: #fcebeb; /* Light red/error color */
+    border-left: 5px solid #cc0000;
+    color: #cc0000;
+}
+
+.alert-success {
+    background-color: #ebfcf6;
+    border-left: 5px solid #009900;
+    color: #009900;
+}
+
+.alert-warning {
+    background-color: #fcfbeb;
+    border-left: 5px solid #e6b800;
+    color: #e6b800;
+}
+
+.kcAlertClass .pf-c-alert__icon {
+    margin-right: 0.5rem;
+}
+
+.kcAlertTitleClass {
+    font-weight: bold;
+}
+
+/* Language Dropdown - Steampunk gear */
+#kc-locale-dropdown button {
+    font-family: var(--kc-font-secondary);
+    background-color: var(--kc-color-soft-grayish-purple);
+    color: var(--kc-color-light-beige);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#kc-locale-dropdown button:hover {
+    background-color: var(--kc-color-steel-blue);
+}
+
+#kc-locale-dropdown ul {
+    border: 1px solid var(--kc-color-soft-grayish-purple);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+#kc-locale-dropdown a:hover {
+    background-color: var(--kc-color-warm-light-peach);
+    color: var(--kc-color-dark-charcoal);
+}
+
+/* Restart Login Link (reset-login) */
+#reset-login {
+    color: var(--kc-color-steel-blue);
+    text-decoration: none;
+    font-family: var(--kc-font-secondary);
+    margin-left: var(--kc-spacing-default);
+}
+
+#reset-login:hover {
+    color: var(--kc-color-muted-copper);
+}
+
+/* Form Inputs and Buttons */
+.kcFormGroupClass {
+    margin-bottom: var(--kc-spacing-default);
+}
+
+.kcInputClass, input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--kc-color-soft-grayish-purple);
+    border-radius: 4px;
+    background-color: white;
+    font-family: var(--kc-font-secondary);
+    color: var(--kc-color-dark-charcoal);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle sunken high-tech look */
+}
+
+.kcInputClass:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="number"]:focus {
+    border-color: var(--kc-color-steel-blue);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(97, 122, 140, 0.5); /* High-tech focus glow */
+}
+
+/* Buttons - Vintage machinery controls/Metallic texture */
+
+/* Primary Button (Call-to-action) */
+.kcButtonPrimaryClass, .kcButtonClass.kcButtonPrimaryClass {
+    background-color: var(--kc-color-warm-light-peach); /* Warm Light Peach */
+    color: var(--kc-color-dark-charcoal);
+    border: 2px solid var(--kc-color-muted-copper); /* Metallic border */
+    border-radius: 6px; /* Rounded edges */
+    padding: 0.75rem 1.5rem;
+    font-family: var(--kc-font-primary);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 0 0 var(--kc-color-muted-copper); /* 3D effect/Rivets */
+    transform: translateY(0);
+}
+
+.kcButtonPrimaryClass:hover, .kcButtonClass.kcButtonPrimaryClass:hover {
+    background-color: var(--kc-color-muted-copper); /* Subtle change to Muted Copper */
+    color: var(--kc-color-light-beige);
+    box-shadow: 0 2px 0 0 var(--kc-color-soft-grayish-purple);
+    transform: translateY(2px);
+}
+
+/* Default/Secondary Button */
+.kcButtonDefaultClass, .kcButtonClass:not(.kcButtonPrimaryClass) {
+    background-color: var(--kc-color-soft-grayish-purple);
+    color: var(--kc-color-light-beige);
+    border: 2px solid var(--kc-color-dark-charcoal);
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--kc-font-secondary);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.kcButtonDefaultClass:hover, .kcButtonClass:not(.kcButtonPrimaryClass):hover {
+    background-color: var(--kc-color-steel-blue);
+}
+
+/* Links */
+a {
+    color: var(--kc-color-steel-blue);
+    text-decoration: underline;
+    font-family: var(--kc-font-secondary);
+}
+
+a:hover {
+    color: var(--kc-color-muted-copper);
+}
+
+/* Utility classes for consistency with Keycloak's use of PatternFly (kcButtonClass.pf-m-danger) */
+.kcButtonClass.pf-m-danger {
+    background-color: #a30000;
+    color: var(--kc-color-light-beige);
+    border-color: #7d0000;
+}
+
+.kcButtonClass.pf-m-danger:hover {
+    background-color: #cc0000;
+}
