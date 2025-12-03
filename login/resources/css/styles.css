@@ -109,7 +109,7 @@ caption, .subtitle {
 /* Form Card - Industrial, framed look */
 .kcFormCardClass {
     background-color: #ffffff; /* Use a clean white/light color for the card content for clarity */
-    border: 3px solid var(--kc-color-soft-grayish-purple); /* Metallic border */
+    border: 5px solid var(--kc-color-soft-grayish-purple); /* Thicker metallic border */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Little drop shadow */
     width: 100%; /* Always full width */
