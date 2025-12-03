@@ -97,9 +97,13 @@ caption, .subtitle {
 }
 
 #kc-header-wrapper {
-    font-family: var(--kc-font-primary);
-    font-weight: 500;
-    font-size: 1.5rem;
+    /* Remove text styles as it is now an image container */
+    padding: 0.5rem 0; /* Add a bit of vertical padding for the logo */
+}
+
+.kc-header-logo {
+    max-height: 50px; /* Set a reasonable height for the header logo */
+    width: auto;
 }
 
 /* Form Card - Industrial, framed look */
