@@ -54,7 +54,7 @@
     <div id="kc-header" class="${properties.kcHeaderClass!}">
         <div id="kc-header-wrapper"
              class="${properties.kcHeaderWrapperClass!}">
-            <img class="kc-header-logo" src="${url.resourcesPath}/img/mastiff-logo.png" alt="${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}" />
+            <img class="kc-header-logo" src="${url.resourcesPath}/img/logo.png" alt="${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}" />
         </div>
     </div>
     <div class="${properties.kcFormCardClass!}">
