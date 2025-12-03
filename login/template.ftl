@@ -49,7 +49,6 @@
     </#if>
 </head>
 
-    <img id="mastiff-background-logo" src="${url.resourcesPath}/img/mastiff-logo.png" alt="Mastiff Logo" />
 <body class="${properties.kcBodyClass!}">
 <div class="${properties.kcLoginClass!}">
     <div id="kc-header" class="${properties.kcHeaderClass!}">
