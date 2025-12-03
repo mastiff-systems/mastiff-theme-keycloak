@@ -91,7 +91,10 @@ caption, .subtitle {
     color: var(--kc-color-light-beige);
     padding: var(--kc-spacing-default);
     text-align: center;
-    border-top-left-radius: 8px;
+    border: 5px solid var(--kc-color-soft-grayish-purple); /* Add full border */
+    border-bottom: none; /* Remove bottom border for seamless join */
+    border-radius: 0;
+    border-top-left-radius: 8px; /* Keep top corners rounded */
     border-top-right-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* High-tech shadow */
 }
@@ -110,7 +113,10 @@ caption, .subtitle {
 .kcFormCardClass {
     background-color: #ffffff; /* Use a clean white/light color for the card content for clarity */
     border: 5px solid var(--kc-color-soft-grayish-purple); /* Thicker metallic border */
-    border-radius: 8px;
+    border-top: none; /* Remove top border for seamless join */
+    border-radius: 0;
+    border-bottom-left-radius: 8px; /* Keep bottom corners rounded */
+    border-bottom-right-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Little drop shadow */
     width: 100%; /* Always full width */
     overflow: hidden; /* To contain the header's border-radius */
