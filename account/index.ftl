@@ -1,14 +1,12 @@
-<!doctype html>
-<html lang="${locale}">
-    <head>
-        <title>${msg("accountManagementTitle")}</title>
+<#import "template.ftl" as layout>
+<#import "messages.ftl" as messages>
 
-        <meta charset="utf-8">
-        <meta name="robots" content="noindex, nofollow">
-    </head>
+<@layout.accountLayout active="account">
 
-    <body>
-        <h1>${msg("accountManagementWelcomeMessage")}</h1>
-        <p>${msg("accountManagementBaseThemeCannotBeUsedDirectly")}</p>
-    </body>
-</html>
+    <h1>${msg("accountManagementTitle")}</h1>
+
+    <p>${msg("accountManagementWelcomeMessage")}</p>
+    
+    <#-- Add content specific to the account index page here -->
+
+</@layout.accountLayout>
