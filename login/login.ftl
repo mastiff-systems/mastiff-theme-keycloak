@@ -1,14 +1,14 @@
 <#import "template.ftl" as layout>
   <@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','password') displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
     <#if section="header">
-      <h2 class="my-4 text-center font-light text-3xl">
+      <h2 class="mb-2 text-center font-light text-3xl">
         ${msg("loginAccountTitle")}
       </h2>
       <#elseif section="form">
         <div id="kc-form">
           <div id="kc-form-wrapper">
             <#if realm.password>
-              <form id="kc-form-login" class="space-y-6 mt-10" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+              <form id="kc-form-login" class="space-y-6 mt-4" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                 <#if !usernameHidden??>
                   <div class="${properties.kcFormGroupClass!} flex flex-col">
                     <label for="username" class="${properties.kcLabelClass!}">

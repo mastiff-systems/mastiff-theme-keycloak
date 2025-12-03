@@ -72,8 +72,14 @@ caption, .subtitle {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: var(--kc-spacing-large);
+    padding: var(--kc-spacing-default); /* Reduced padding for mobile */
+}
+
+@media (min-width: 768px) {
+    .kcLoginClass {
+        min-height: 100vh; /* Full screen height on desktop */
+        padding: var(--kc-spacing-large);
+    }
 }
 
 /* Header and Wrapper for a sleek look (Dark Charcoal) */
@@ -99,9 +105,14 @@ caption, .subtitle {
     border: 3px solid var(--kc-color-soft-grayish-purple); /* Metallic border */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Little drop shadow */
-    max-width: 500px;
-    width: 100%;
+    width: 100%; /* Always full width */
     overflow: hidden; /* To contain the header's border-radius */
+}
+
+@media (min-width: 768px) {
+    .kcFormCardClass {
+        max-width: 500px; /* Limit width on desktop */
+    }
 }
 
 /* Form Header (below main header) */
@@ -273,4 +284,15 @@ a:hover {
 
 .kcButtonClass.pf-m-danger:hover {
     background-color: #cc0000;
+}
+/* Styling for the background logo */
+#mastiff-background-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: auto;
+    opacity: 0.15; /* Make it a subtle background element */
+    z-index: 0;
 }
