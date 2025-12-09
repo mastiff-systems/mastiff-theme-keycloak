@@ -33,9 +33,6 @@ body {
     font-size: 16px; /* Body Text */
     line-height: 1.5;
     margin: 0; /* Ensure no browser default margin interferes with centering */
-    min-height: 100vh;
-    width: 100%;
-    padding: var(--kc-spacing-default);
 }
 
 /* Typography Hierarchy */

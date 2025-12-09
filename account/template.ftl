@@ -105,7 +105,7 @@
     </div>
 
     <main class="pf-c-page__main" role="main">
-        <section class="pf-c-page__main-section pf-m-dark-100 pf-u-py-2xl" <#if bodyClass?has_content>style="min-height: 100vh;"</#if>>
+        <section class="pf-c-page__main-section pf-m-dark-100 pf-u-py-2xl">
             <div class="pf-c-content">
                 <#if displayMessage && message?has_content>
                     <div class="pf-c-alert pf-m-<#if message.type = 'error'>danger<#else>${message.type}</#if> pf-m-inline">
