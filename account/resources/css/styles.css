@@ -1,3 +1,11 @@
+/* Import Roboto Slab font FIRST */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
+/* Universal font application */
+*:not(i):not(.fa):not(.fas):not(.far):not(.fal):not(.fab) {
+  font-family: 'Roboto Slab', Georgia, serif !important;
+}
+
 /* Mastiff Theme Styles - PatternFly Overrides */
 :root {
   /* Primary Colors */
@@ -13,10 +21,13 @@
   --mastiff-muted-copper: #bc7259;
   
   /* Typography */
-  --mastiff-font-heading: 'Roboto Slab', serif;
-  --mastiff-font-body: 'Roboto', sans-serif;
+  --mastiff-font: 'Roboto Slab', Georgia, serif;
   
   /* Override PatternFly Variables */
+  --pf-v5-global--FontFamily--sans-serif: var(--mastiff-font) !important;
+  --pf-v5-global--FontFamily--heading: var(--mastiff-font) !important;
+  --pf-v5-global--FontFamily--redhat-updated--sans-serif: var(--mastiff-font) !important;
+  --pf-v5-global--FontFamily--redhat--sans-serif: var(--mastiff-font) !important;
   --pf-v5-global--BackgroundColor--100: var(--mastiff-light-beige);
   --pf-v5-global--Color--100: var(--mastiff-dark-charcoal);
   --pf-v5-global--primary-color--100: var(--mastiff-muted-copper);
@@ -29,18 +40,20 @@
   --pf-v5-c-tabs__link--m-current--Color: var(--mastiff-muted-copper);
 }
 
-/* Import Roboto Slab font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+/* Consolidated Font Overrides */
+code, pre, .pf-v5-c-code-block {
+  font-family: var(--mastiff-font) !important;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
 
 body {
-  font-family: var(--mastiff-font-body);
   background-color: var(--pf-v5-global--BackgroundColor--100);
   color: var(--pf-v5-global--Color--100);
   line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--mastiff-font-heading);
   font-weight: 700;
   color: var(--mastiff-dark-charcoal);
 }
