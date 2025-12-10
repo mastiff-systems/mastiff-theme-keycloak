@@ -1,4 +1,4 @@
-/* Mastiff Theme Styles */
+/* Mastiff Theme Styles - PatternFly Overrides */
 :root {
   /* Primary Colors */
   --mastiff-light-beige: #d4cec2;
@@ -16,13 +16,17 @@
   --mastiff-font-heading: 'Roboto Slab', serif;
   --mastiff-font-body: 'Roboto', sans-serif;
   
-  /* Button Styles */
-  --mastiff-btn-bg: linear-gradient(145deg, #d4cec2, #bcb6aa);
-  --mastiff-btn-border: 2px solid #423941;
-  --mastiff-btn-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  /* Override PatternFly Variables */
+  --pf-v5-global--BackgroundColor--100: var(--mastiff-light-beige);
+  --pf-v5-global--Color--100: var(--mastiff-dark-charcoal);
+  --pf-v5-global--primary-color--100: var(--mastiff-muted-copper);
+  --pf-v5-global--link--Color: var(--mastiff-steel-blue);
+  --pf-v5-global--link--Color--hover: var(--mastiff-light-peach);
   
-  /* Layout */
-  --mastiff-grid-gap: 1rem;
+  /* Tab Styles */
+  --pf-v5-c-tabs__link--Color: var(--mastiff-dark-charcoal);
+  --pf-v5-c-tabs__link--BackgroundColor: var(--mastiff-light-beige);
+  --pf-v5-c-tabs__link--m-current--Color: var(--mastiff-muted-copper);
 }
 
 /* Import Roboto Slab font */
@@ -30,14 +34,15 @@
 
 body {
   font-family: var(--mastiff-font-body);
-  background-color: var(--mastiff-light-beige);
-  color: var(--mastiff-dark-charcoal);
+  background-color: var(--pf-v5-global--BackgroundColor--100);
+  color: var(--pf-v5-global--Color--100);
   line-height: 1.5;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--mastiff-font-heading);
   font-weight: 700;
+  color: var(--mastiff-dark-charcoal);
 }
 
 h1 { font-size: 36px; }
@@ -45,39 +50,85 @@ h2 { font-size: 30px; }
 h3 { font-size: 24px; }
 
 /* Vintage Machinery Buttons */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: var(--mastiff-btn-bg);
-  border: var(--mastiff-btn-border);
-  border-radius: 4px;
-  box-shadow: var(--mastiff-btn-shadow);
-  font-family: var(--mastiff-font-heading);
-  color: var(--mastiff-dark-charcoal);
-  text-decoration: none;
-  transition: all 0.3s ease;
+.pf-v5-c-button {
+  background: linear-gradient(145deg, #d4cec2, #bcb6aa);
+  border: 2px solid var(--mastiff-grayish-purple) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+  font-family: var(--mastiff-font-heading) !important;
+  color: var(--mastiff-dark-charcoal) !important;
+  transition: all 0.3s ease !important;
   position: relative;
-  overflow: hidden;
 }
 
-.btn:hover {
-  background: linear-gradient(145deg, #f3c8a3, #bc7259);
+.pf-v5-c-button:hover {
+  background: linear-gradient(145deg, #f3c8a3, #bc7259) !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
 }
 
-.btn:active {
-  transform: translateY(1px);
+.pf-v5-c-button:active {
+  transform: translateY(1px) !important;
 }
 
-/* 12-Column Grid System */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: var(--mastiff-grid-gap);
+/* Tabs with Metallic Style */
+.pf-v5-c-tabs__link {
+  border-bottom: 3px solid var(--mastiff-muted-copper) !important;
+  margin-right: 8px !important;
+  padding: 12px 24px !important;
+  position: relative;
+}
+
+.pf-v5-c-tabs__link::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--mastiff-steel-blue);
+  border-radius: 50%;
+}
+
+.pf-v5-c-tabs__link.pf-m-current {
+  background: rgba(188, 114, 89, 0.1) !important;
+  border-image: linear-gradient(90deg, #bc7259, #617a8c) 1 !important;
+}
+
+/* Dark Mode Support */
+.pf-v5-theme-dark {
+  --pf-v5-global--BackgroundColor--100: #151119;
+  --pf-v5-global--Color--100: #d4cec2;
+  --mastiff-dark-charcoal: #d4cec2;
+  --mastiff-light-beige: #151119;
+  
+  background-color: var(--pf-v5-global--BackgroundColor--100);
+  color: var(--pf-v5-global--Color--100);
+}
+
+.pf-v5-theme-dark .pf-v5-c-button {
+  background: linear-gradient(145deg, #423941, #151119) !important;
+  border-color: var(--mastiff-steel-blue) !important;
+}
+
+/* Main Content Area */
+.pf-v5-c-page__main {
+  background-color: var(--pf-v5-global--BackgroundColor--100) !important;
+}
+
+/* Accessibility Enhancements */
+a:focus, button:focus {
+  outline: 2px solid var(--mastiff-steel-blue) !important;
+  outline-offset: 2px !important;
+}
+
+/* Contrast Checks */
+@media (prefers-contrast: more) {
+  :root {
+    --pf-v5-global--BackgroundColor--100: #fff;
+    --pf-v5-global--Color--100: #000;
+  }
 }
 
 /* Pixel Avatar Style */
@@ -92,26 +143,4 @@ h3 { font-size: 24px; }
   border: 2px solid;
   border-image: linear-gradient(145deg, #bc7259, #617a8c) 1;
   padding: 1rem;
-}
-
-/* Dark Mode Support */
-.pf-v5-theme-dark {
-  --mastiff-light-beige: #151119;
-  --mastiff-dark-charcoal: #d4cec2;
-  background-color: var(--mastiff-light-beige);
-  color: var(--mastiff-dark-charcoal);
-}
-
-/* Accessibility Enhancements */
-a:focus, button:focus {
-  outline: 2px solid var(--mastiff-steel-blue);
-  outline-offset: 2px;
-}
-
-/* Contrast Checks */
-@media (prefers-contrast: more) {
-  body {
-    --mastiff-dark-charcoal: #000;
-    --mastiff-light-beige: #fff;
-  }
 }
