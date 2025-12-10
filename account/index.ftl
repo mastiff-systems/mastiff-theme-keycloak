@@ -144,7 +144,7 @@
         "realm": "${realm.name}",
         "clientId": "${clientId}",
         "resourceUrl": "${resourceUrl}",
-        "logo": "${properties.logo!""}",
+        "logo": "Mastiff-Systems-Dark.png",
         "logoUrl": "${properties.logoUrl!""}",
         "baseUrl": "${baseUrl}",
         "locale": "${locale}",
