@@ -108,6 +108,7 @@
         <link rel="stylesheet" href="${resourceUrl}/${style}">
       </#list>
     </#if>
+    <link rel="stylesheet" href="${resourceUrl}/css/styles.css">
     <#if entryScript?has_content>
       <script type="module" src="${resourceUrl}/${entryScript}"></script>
     </#if>

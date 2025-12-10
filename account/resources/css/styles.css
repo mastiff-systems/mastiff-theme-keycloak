@@ -1,0 +1,117 @@
+/* Mastiff Theme Styles */
+:root {
+  /* Primary Colors */
+  --mastiff-light-beige: #d4cec2;
+  --mastiff-dark-charcoal: #151119;
+  
+  /* Secondary Colors */
+  --mastiff-grayish-purple: #423941;
+  --mastiff-steel-blue: #617a8c;
+  
+  /* Accent Colors */
+  --mastiff-light-peach: #f3c8a3;
+  --mastiff-muted-copper: #bc7259;
+  
+  /* Typography */
+  --mastiff-font-heading: 'Roboto Slab', serif;
+  --mastiff-font-body: 'Roboto', sans-serif;
+  
+  /* Button Styles */
+  --mastiff-btn-bg: linear-gradient(145deg, #d4cec2, #bcb6aa);
+  --mastiff-btn-border: 2px solid #423941;
+  --mastiff-btn-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  
+  /* Layout */
+  --mastiff-grid-gap: 1rem;
+}
+
+/* Import Roboto Slab font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
+body {
+  font-family: var(--mastiff-font-body);
+  background-color: var(--mastiff-light-beige);
+  color: var(--mastiff-dark-charcoal);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: var(--mastiff-font-heading);
+  font-weight: 700;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+
+/* Vintage Machinery Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--mastiff-btn-bg);
+  border: var(--mastiff-btn-border);
+  border-radius: 4px;
+  box-shadow: var(--mastiff-btn-shadow);
+  font-family: var(--mastiff-font-heading);
+  color: var(--mastiff-dark-charcoal);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: linear-gradient(145deg, #f3c8a3, #bc7259);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* 12-Column Grid System */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--mastiff-grid-gap);
+}
+
+/* Pixel Avatar Style */
+.avatar-pixel {
+  image-rendering: pixelated;
+  border: 2px solid var(--mastiff-steel-blue);
+  border-radius: 4px;
+}
+
+/* Metallic Border Treatment */
+.metallic-border {
+  border: 2px solid;
+  border-image: linear-gradient(145deg, #bc7259, #617a8c) 1;
+  padding: 1rem;
+}
+
+/* Dark Mode Support */
+.pf-v5-theme-dark {
+  --mastiff-light-beige: #151119;
+  --mastiff-dark-charcoal: #d4cec2;
+  background-color: var(--mastiff-light-beige);
+  color: var(--mastiff-dark-charcoal);
+}
+
+/* Accessibility Enhancements */
+a:focus, button:focus {
+  outline: 2px solid var(--mastiff-steel-blue);
+  outline-offset: 2px;
+}
+
+/* Contrast Checks */
+@media (prefers-contrast: more) {
+  body {
+    --mastiff-dark-charcoal: #000;
+    --mastiff-light-beige: #fff;
+  }
+}
