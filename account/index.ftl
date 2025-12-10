@@ -2,7 +2,7 @@
 <html lang="${locale}">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" type="${properties.favIconType!'image/svg+xml'}" href="${resourceUrl}${properties.favIcon!'/favicon.svg'}">
+    <link rel="icon" type="${properties.favIconType!'image/png'}" href="${resourceUrl}${properties.favIcon!'/mastiff-logo.png'}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light${darkMode?then(' dark', '')}">
     <meta name="description" content="${properties.description!'The Account Console is a web-based interface for managing your account.'}">
