@@ -108,7 +108,6 @@
         <link rel="stylesheet" href="${resourceUrl}/${style}">
       </#list>
     </#if>
-    <link rel="stylesheet" href="${resourceUrl}/css/styles.css">
     <#if entryScript?has_content>
       <script type="module" src="${resourceUrl}/${entryScript}"></script>
     </#if>
@@ -145,7 +144,7 @@
         "realm": "${realm.name}",
         "clientId": "${clientId}",
         "resourceUrl": "${resourceUrl}",
-        "logo": "Mastiff-Systems-Dark.png",
+        "logo": "logo.png",
         "logoUrl": "${properties.logoUrl!""}",
         "baseUrl": "${baseUrl}",
         "locale": "${locale}",
